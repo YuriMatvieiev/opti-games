@@ -1,17 +1,24 @@
 //====================================================================================================
 .hero {
   background: $yellow;
-  padding-top: toRem(90);
-  padding-bottom: toRem(70);
-  @media (max-width: $mobile) {
-    padding-top: toRem(60);
+
+  height: calc(100vh - 83px);
+  @media (max-width: $mobileSmall) {
+    height: calc(100vh - 75.83px);
   }
   // .hero__container
   &__container {
+    position: relative;
+    width: 100%;
+    height: 100%;
   }
   // .hero__content
   &__content {
     text-align: center;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -45%);
   }
   // .hero__logo
   &__logo {
