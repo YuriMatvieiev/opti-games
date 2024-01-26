@@ -1,0 +1,58 @@
+// Заголовки, загальні БЕМ блоки та інше...
+.yellow {
+  color: $yellow;
+}
+.blue-border {
+  border: 1.289px solid $blue;
+}
+
+.yellow-border {
+  border: 1.289px solid $yellow;
+}
+
+.yellow-play {
+  background: $yellow;
+  border: 2px solid #f8cf63;
+  @media (any-hover: hover) {
+    &:hover {
+      background: #f0cc70;
+      border: 2px solid #d3b056;
+    }
+  }
+}
+
+.red-play {
+  background: #f9373f;
+  border: 2px solid #ef6f78;
+  @media (any-hover: hover) {
+    &:hover {
+      background: #ef6065;
+      border: 2px solid #f5afb2;
+    }
+  }
+}
+.blue {
+  color: $blue;
+}
+
+.purple-button {
+  background: $purple;
+  color: $white;
+  font-family: "Rubik";
+  font-size: toRem(16);
+  font-weight: 700;
+  line-height: 90%;
+  text-transform: uppercase;
+  border-radius: 10px;
+  padding: 16px 18px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  transition:
+    border,
+    background 0.3s;
+  @media (any-hover: hover) {
+    &:hover {
+      border: 2px solid rgba(255, 255, 255, 0.5);
+      background: #dcb9e8;
+    }
+  }
+}

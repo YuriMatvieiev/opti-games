@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  @@include('html/_head.htm',{ "title":"OPTI GAMES" })
+  <body>
+    <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page">
+        <section class="hero">
+          <div class="hero__container">
+            <div class="hero__content">
+              <img
+                src="@img/hero-logo.png"
+                alt="opti-games logo"
+                class="hero__logo"
+              />
+              <h1 class="hero__title">Hi. We’re Opti Games.</h1>
+              <h2 class="hero__subtitle">
+                We combine scrappy indie passion with AAA-level talent and
+                experience to create endlessly optimistic ‘golden retriever’
+                games.
+              </h2>
+            </div>
+          </div>
+        </section>
+        <section class="content">
+          <div data-prlx-parent class="content__container">
+            <h3 data-prlx data-coefficient="5" class="content__title yellow">
+              our studio vision
+            </h3>
+            <div
+              data-prlx
+              data-coefficient="5"
+              class="content__video-wrap yellow-border"
+            >
+              <iframe
+                src="https://www.youtube.com/embed/Fvk0a0wvUzk?si=xZJICTYMKvxlbAZb"
+                title="YouTube video player"
+                frameborder="0"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+                style="display: none"
+                class="ibg content__video-iframe"
+              ></iframe>
+              <img
+                src="@img/video-image.png"
+                alt=""
+                class="ibg content__video-image"
+              />
+              <button class="content__video-button yellow-play">
+                <img src="@img/play-icon.png" alt="play-button" />
+              </button>
+            </div>
+            <div data-prlx data-coefficient="5" class="content__copy">
+              We started Opti so we could make the games we always dreamt of
+              playing.
+            </div>
+            <div data-prlx data-coefficient="5" class="content__borders-block">
+              <h4 class="content__subtitle">
+                We’re currently building a game we call
+              </h4>
+              <div class="content__game-name">
+                SPARKBALL.
+                <img
+                  src="@img/sparkball-logo.png"
+                  alt="sparkball-logo"
+                  class="content__game-logo"
+                />
+              </div>
+            </div>
+          </div>
+          <picture>
+            <source
+              media="(min-width: 768px)"
+              srcset="@img/picture-fullw-2x.png 2x"
+            />
+
+            <img
+              class="ibg ibg-contain content__img-full"
+              src="@img/picture-fullw.png"
+              alt="Image"
+            />
+          </picture>
+
+          <div data-prlx-parent class="content__container">
+            <h4 data-prlx data-coefficient="5" class="content__subtitle blue">
+              close your eyes and imagine
+            </h4>
+            <div data-prlx data-coefficient="5" class="content__text">
+              “League of Legends meets FIFA & Rocket League.”
+            </div>
+            <h4 data-prlx data-coefficient="5" class="content__subtitle blue">
+              YEAH, it’s pretty wild.
+            </h4>
+            <div
+              data-prlx
+              data-coefficient="5"
+              class="content__video-wrap blue-border"
+            >
+              <iframe
+                src="https://www.youtube.com/embed/Fvk0a0wvUzk?si=xZJICTYMKvxlbAZb"
+                title="YouTube video player"
+                frameborder="0"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+                style="display: none"
+                class="ibg content__video-iframe"
+              ></iframe>
+              <img
+                src="@img/video-image-2.png"
+                alt=""
+                class="ibg content__video-image"
+              />
+              <button class="content__video-button red-play">
+                <img src="@img/play-icon.png" alt="play-button" />
+              </button>
+            </div>
+            <h3 data-prlx data-coefficient="5" class="content__title blue">
+              gameplay trailer
+            </h3>
+            <div data-prlx data-coefficient="5" class="content__launch">
+              Launching 2025.
+            </div>
+            <div data-prlx data-coefficient="5" class="content__buttons">
+              <a href="#" class="purple-button content__button"
+                ><img src="@img/discord.svg" alt="discord-icon" /> Join Our
+                COMMUNITY</a
+              >
+              <a href="#" class="purple-button content__button"
+                ><img src="@img/steam.svg" alt="steam-icon" /> Wishlist us on
+                Steam</a
+              >
+            </div>
+          </div>
+        </section>
+      </main>
+      @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+  </body>
+</html>

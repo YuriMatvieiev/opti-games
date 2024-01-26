@@ -1,0 +1,239 @@
+//====================================================================================================
+.hero {
+  background: $yellow;
+  padding-top: toRem(90);
+  padding-bottom: toRem(70);
+  @media (max-width: $mobile) {
+    padding-top: toRem(60);
+  }
+  // .hero__container
+  &__container {
+  }
+  // .hero__content
+  &__content {
+    text-align: center;
+  }
+  // .hero__logo
+  &__logo {
+    margin-left: -40px;
+    max-width: 906px;
+
+    @include adaptiveValue("margin-bottom", 50, 40);
+
+    @media (max-width: $tablet) {
+      margin-left: -20px;
+      @include adaptiveValue("max-width", 720, 300, 0, 991.98, 375);
+    }
+  }
+  // .hero__title
+  &__title {
+    @include adaptiveValue("font-size", 64, 50);
+    font-weight: 700;
+    line-height: 70%;
+    letter-spacing: -1.92px;
+    text-transform: uppercase;
+    @include adaptiveValue("margin-bottom", 44, 34);
+    @media (max-width: $tablet) {
+      letter-spacing: -1px;
+      line-height: 100%;
+    }
+  }
+  // .hero__subtitle
+  &__subtitle {
+    font-family: "Rubik";
+    @include adaptiveValue("font-size", 28, 24);
+    line-height: 120%;
+    letter-spacing: -1.68px;
+    @media (max-width: $tablet) {
+      letter-spacing: -1px;
+    }
+    @media (max-width: $mobileSmall) {
+      letter-spacing: -0.5px;
+    }
+  }
+}
+
+//====================================================================================================
+.content {
+  background: $mainColor;
+  padding-top: toRem(85);
+  @include adaptiveValue("padding-top", 85, 40);
+  // padding-bottom: toRem(64);
+  // .content__container
+  &__container {
+    text-align: center;
+  }
+  // .content__title
+  &__title {
+    font-family: "Rubik Mono One";
+    line-height: 100%;
+    letter-spacing: -1.08px;
+    margin-bottom: toRem(20);
+  }
+  // .content__video-wrap
+  &__video-wrap {
+    position: relative;
+    margin-bottom: toRem(22);
+    &.blue-border {
+      margin-top: toRem(65);
+      @media (max-width: $mobile) {
+        margin-top: 0;
+      }
+    }
+  }
+  // .content__video-iframe
+  &__video-iframe {
+    aspect-ratio: 928/522;
+  }
+  // .content__video-image
+  &__video-image {
+    aspect-ratio: 928/522;
+  }
+  // .content__video-button
+  &__video-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 78px;
+    height: 78px;
+    border-radius: 20px;
+    z-index: 1;
+    transition:
+      border,
+      background 0.3s;
+    @media (max-width: $mobile) {
+      width: 58px;
+      height: 58px;
+    }
+    img {
+      width: toRem(23);
+      height: toRem(25);
+    }
+  }
+  // .content__copy
+  &__copy {
+    font-family: "Rubik";
+    color: $white;
+    font-size: toRem(48);
+    @include adaptiveValue("font-size", 48, 30);
+    line-height: 120%;
+    letter-spacing: -2.88px;
+    margin-bottom: toRem(50);
+    margin-top: toRem(90);
+    @media (max-width: $tablet) {
+      letter-spacing: -2px;
+    }
+    @media (max-width: $mobile) {
+      letter-spacing: -1px;
+      margin-bottom: toRem(40);
+      margin-top: toRem(40);
+    }
+    @media (max-width: $mobileSmall) {
+      letter-spacing: -0.5px;
+    }
+  }
+  // .content__borders-block
+  &__borders-block {
+    border-top: 2px solid $blue;
+    border-bottom: 2px solid $blue;
+    padding-top: toRem(64);
+    padding-bottom: toRem(42);
+    @media (max-width: $mobile) {
+      padding-top: toRem(34);
+      padding-bottom: toRem(34);
+    }
+  }
+  // .content__subtitle
+  &__subtitle {
+    font-family: "Rubik";
+    color: $blue;
+    @include adaptiveValue("font-size", 32, 24);
+    font-weight: 700;
+    line-height: 70%;
+    letter-spacing: -0.96px;
+    text-transform: uppercase;
+    margin-bottom: toRem(32);
+    @media (max-width: $tablet) {
+      line-height: 100%;
+    }
+  }
+  // .content__game-name
+  &__game-name {
+    color: $white;
+    font-size: toRem(180);
+    @include adaptiveValue("font-size", 180, 60);
+    font-weight: 700;
+    line-height: 70%;
+    text-transform: uppercase;
+    position: relative;
+  }
+  // .content__game-logo
+  &__game-logo {
+    position: absolute;
+    @include adaptiveValue("top", -56, -28);
+    @include adaptiveValue("right", -14, 0);
+    @include adaptiveValue("width", 157, 60);
+  }
+  &__img-full {
+    aspect-ratio: 1440/812;
+    object-fit: contain;
+    // margin-bottom: toRem(50);
+    // margin-top: toRem(60);
+  }
+  // .content__text
+  &__text {
+    color: $white;
+    @include adaptiveValue("font-size", 80, 42);
+    font-weight: 700;
+    line-height: 70%;
+    text-transform: uppercase;
+    margin-bottom: toRem(50);
+    @media (max-width: $mobile) {
+      margin-bottom: toRem(30);
+      line-height: 100%;
+    }
+  }
+  // .content__launch
+  &__launch {
+    color: $white;
+    @include adaptiveValue("font-size", 180, 70);
+    font-weight: 700;
+    line-height: 70%;
+    letter-spacing: -5.4px;
+    text-transform: uppercase;
+    margin-top: toRem(70);
+    margin-bottom: toRem(30);
+    @media (max-width: $tablet) {
+      letter-spacing: -4px;
+    }
+    @media (max-width: $mobile) {
+      letter-spacing: -1px;
+      margin-top: toRem(40);
+    }
+    @media (max-width: $mobileSmall) {
+      letter-spacing: -0.5px;
+    }
+  }
+  // .content__buttons
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    justify-content: center;
+    @media (max-width: $mobileSmall) {
+      flex-direction: column;
+    }
+  }
+  // .content__button
+  &__button {
+    max-width: 333px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    img {
+      max-width: 39px;
+    }
+  }
+}
