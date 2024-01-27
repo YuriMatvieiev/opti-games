@@ -469,6 +469,7 @@ h6 {
 
 .content__video-iframe {
   aspect-ratio: 928/522;
+  border: 0;
 }
 
 .content__video-image {
