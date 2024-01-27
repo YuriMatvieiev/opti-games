@@ -4,7 +4,8 @@
   background: $mainColor;
   padding-bottom: toRem(40);
   position: relative;
-  @include adaptiveValue("margin-top", 0, -100);
+  //   margin-top: -250px;
+  margin-top: -20px;
   z-index: 3;
   // .footer__mascot
   &__mascot {

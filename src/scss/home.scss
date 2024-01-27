@@ -71,9 +71,10 @@
   position: relative;
   &-first {
     z-index: 3;
+    @include adaptiveValue("padding-bottom", 90, 40);
   }
   &-second {
-    @include adaptiveValue("padding-top", 45, 30);
+    @include adaptiveValue("padding-top", 90, 40);
     z-index: 3;
   }
   // .content__container
@@ -136,8 +137,8 @@
     @include adaptiveValue("font-size", 48, 30);
     line-height: 120%;
     letter-spacing: -2.88px;
-    margin-bottom: toRem(50);
-    margin-top: toRem(90);
+    margin-bottom: toRem(90);
+    margin-top: toRem(50);
     @media (max-width: $tablet) {
       letter-spacing: -2px;
     }
@@ -200,8 +201,8 @@
     background: $mainColor;
   }
   &__full-img {
-    background: url("@img/picture-fullw-2x.png") center / cover no-repeat;
-    @include adaptiveValue("margin-top", 0, 200);
+    background: url("@img/picture-fullw-2x.png") bottom center / cover no-repeat;
+    @include adaptiveValue("margin-top", 20, 300);
     position: absolute;
     left: 0;
     top: 0;
@@ -209,9 +210,10 @@
     height: 100%;
     z-index: 2;
     @media (max-width: $mobile) {
-      background: url("@img/picture-fullw.png") center / cover no-repeat;
+      background: url("@img/picture-fullw.png") bottom center / cover no-repeat;
     }
   }
+
   // .content__text
   &__text {
     color: $white;
@@ -233,7 +235,7 @@
     line-height: 70%;
     letter-spacing: -5.4px;
     text-transform: uppercase;
-    margin-top: toRem(70);
+    @include adaptiveValue("margin-top", 110, 40);
     margin-bottom: toRem(30);
     @media (max-width: $tablet) {
       letter-spacing: -4px;

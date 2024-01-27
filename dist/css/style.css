@@ -286,6 +286,7 @@ h6 {
   background: #151216;
   padding-bottom: 2.5rem;
   position: relative;
+  margin-top: -20px;
   z-index: 3;
 }
 
@@ -500,8 +501,8 @@ h6 {
   font-size: 3rem;
   line-height: 120%;
   letter-spacing: -2.88px;
-  margin-bottom: 3.125rem;
-  margin-top: 5.625rem;
+  margin-bottom: 5.625rem;
+  margin-top: 3.125rem;
 }
 
 .content__borders-block {
@@ -542,7 +543,7 @@ h6 {
 }
 
 .no-webp .content__full-img{
-  background: url("../img/picture-fullw-2x.png") center/cover no-repeat; }
+  background: url("../img/picture-fullw-2x.png") bottom center/cover no-repeat; }
 
 .content__full-img {
   position: absolute;
@@ -567,7 +568,6 @@ h6 {
   line-height: 70%;
   letter-spacing: -5.4px;
   text-transform: uppercase;
-  margin-top: 4.375rem;
   margin-bottom: 1.875rem;
 }
 
@@ -601,10 +601,6 @@ h6 {
 }
 
 @media (min-width: 60.5em) {
-  .footer {
-    margin-top: 0.0000000625rem;
-  }
-
   .footer__mascot {
     bottom: -8.125rem;
   }
@@ -637,8 +633,12 @@ h6 {
     padding-top: 5.3125rem;
   }
 
+  .content-first {
+    padding-bottom: 5.625rem;
+  }
+
   .content-second {
-    padding-top: 2.8125rem;
+    padding-top: 5.625rem;
   }
 
   .content__copy {
@@ -666,7 +666,7 @@ h6 {
   }
 
   .content__full-img {
-    margin-top: 0.0000000625rem;
+    margin-top: 1.25rem;
   }
 
   .content__text {
@@ -675,6 +675,10 @@ h6 {
 
   .content__launch {
     font-size: 11.25rem;
+  }
+
+  .content__launch {
+    margin-top: 6.875rem;
   }
 }
 
@@ -746,7 +750,7 @@ h6 {
   }
 
   .no-webp .content__full-img{
-    background: url("../img/picture-fullw.png") center/cover no-repeat; }
+    background: url("../img/picture-fullw.png") bottom center/cover no-repeat; }
 
   .content__text {
     margin-bottom: 1.875rem;
@@ -789,10 +793,6 @@ h6 {
 }
 
 @media (max-width: 23.4375em) {
-  .footer {
-    margin-top: -6.25rem;
-  }
-
   .footer__mascot {
     bottom: -2.5rem;
   }
@@ -825,8 +825,12 @@ h6 {
     padding-top: 2.5rem;
   }
 
+  .content-first {
+    padding-bottom: 2.5rem;
+  }
+
   .content-second {
-    padding-top: 1.875rem;
+    padding-top: 2.5rem;
   }
 
   .content__copy {
@@ -854,7 +858,7 @@ h6 {
   }
 
   .content__full-img {
-    margin-top: 12.5rem;
+    margin-top: 18.75rem;
   }
 
   .content__text {
@@ -864,21 +868,13 @@ h6 {
   .content__launch {
     font-size: 4.375rem;
   }
+
+  .content__launch {
+    margin-top: 2.5rem;
+  }
 }
 
 @media (min-width: 23.4375em) and (max-width: 60.5em) {
-@supports (margin-top: clamp( -6.25rem , -10.2023609164rem  +  16.8634065767vw , 0.0000000625rem )) {
-    .footer {
-      margin-top: clamp( -6.25rem , -10.2023609164rem  +  16.8634065767vw , 0.0000000625rem );
-    }
-}
-
-@supports not (margin-top: clamp( -6.25rem , -10.2023609164rem  +  16.8634065767vw , 0.0000000625rem )) {
-    .footer {
-      margin-top: calc(-6.25rem + 6.2500000625 * (100vw - 23.4375rem) / 37.0625);
-    }
-}
-
 @supports (bottom: clamp( -8.125rem , 1.0571247892rem  +  -15.1770657673vw , -2.5rem )) {
     .footer__mascot {
       bottom: clamp( -8.125rem , 1.0571247892rem  +  -15.1770657673vw , -2.5rem );
@@ -975,15 +971,27 @@ h6 {
     }
 }
 
-@supports (padding-top: clamp( 1.875rem , 1.2821458685rem  +  2.5295109612vw , 2.8125rem )) {
-    .content-second {
-      padding-top: clamp( 1.875rem , 1.2821458685rem  +  2.5295109612vw , 2.8125rem );
+@supports (padding-bottom: clamp( 2.5rem , 0.5238195616rem  +  8.431703204vw , 5.625rem )) {
+    .content-first {
+      padding-bottom: clamp( 2.5rem , 0.5238195616rem  +  8.431703204vw , 5.625rem );
     }
 }
 
-@supports not (padding-top: clamp( 1.875rem , 1.2821458685rem  +  2.5295109612vw , 2.8125rem )) {
+@supports not (padding-bottom: clamp( 2.5rem , 0.5238195616rem  +  8.431703204vw , 5.625rem )) {
+    .content-first {
+      padding-bottom: calc(2.5rem + 3.125 * (100vw - 23.4375rem) / 37.0625);
+    }
+}
+
+@supports (padding-top: clamp( 2.5rem , 0.5238195616rem  +  8.431703204vw , 5.625rem )) {
     .content-second {
-      padding-top: calc(1.875rem + 0.9375 * (100vw - 23.4375rem) / 37.0625);
+      padding-top: clamp( 2.5rem , 0.5238195616rem  +  8.431703204vw , 5.625rem );
+    }
+}
+
+@supports not (padding-top: clamp( 2.5rem , 0.5238195616rem  +  8.431703204vw , 5.625rem )) {
+    .content-second {
+      padding-top: calc(2.5rem + 3.125 * (100vw - 23.4375rem) / 37.0625);
     }
 }
 
@@ -1059,15 +1067,15 @@ h6 {
     }
 }
 
-@supports (margin-top: clamp( 0.0000000625rem , 20.4047217143rem  +  -33.7268126476vw , 12.5rem )) {
+@supports (margin-top: clamp( 1.25rem , 29.8166104553rem  +  -47.2175379427vw , 18.75rem )) {
     .content__full-img {
-      margin-top: clamp( 0.0000000625rem , 20.4047217143rem  +  -33.7268126476vw , 12.5rem );
+      margin-top: clamp( 1.25rem , 29.8166104553rem  +  -47.2175379427vw , 18.75rem );
     }
 }
 
-@supports not (margin-top: clamp( 0.0000000625rem , 20.4047217143rem  +  -33.7268126476vw , 12.5rem )) {
+@supports not (margin-top: clamp( 1.25rem , 29.8166104553rem  +  -47.2175379427vw , 18.75rem )) {
     .content__full-img {
-      margin-top: calc(12.5rem + -12.4999999375 * (100vw - 23.4375rem) / 37.0625);
+      margin-top: calc(18.75rem + -17.5 * (100vw - 23.4375rem) / 37.0625);
     }
 }
 
@@ -1092,6 +1100,18 @@ h6 {
 @supports not (font-size: clamp( 4.375rem , 0.0274030354rem  +  18.5497470489vw , 11.25rem )) {
     .content__launch {
       font-size: calc(4.375rem + 6.875 * (100vw - 23.4375rem) / 37.0625);
+    }
+}
+
+@supports (margin-top: clamp( 2.5rem , -0.2666526138rem  +  11.8043844857vw , 6.875rem )) {
+    .content__launch {
+      margin-top: clamp( 2.5rem , -0.2666526138rem  +  11.8043844857vw , 6.875rem );
+    }
+}
+
+@supports not (margin-top: clamp( 2.5rem , -0.2666526138rem  +  11.8043844857vw , 6.875rem )) {
+    .content__launch {
+      margin-top: calc(2.5rem + 4.375 * (100vw - 23.4375rem) / 37.0625);
     }
 }
 }
@@ -1141,9 +1161,9 @@ h6 {
   }
 }
 
-.webp .content__full-img{ background: url(../img/picture-fullw-2x.webp) center/cover no-repeat; }
+.webp .content__full-img{ background: url(../img/picture-fullw-2x.webp) bottom center/cover no-repeat; }
 
 @media (max-width: 47.99875em){
 
-  .webp .content__full-img{ background: url(../img/picture-fullw.webp) center/cover no-repeat; }
+  .webp .content__full-img{ background: url(../img/picture-fullw.webp) bottom center/cover no-repeat; }
 }

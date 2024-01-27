@@ -39,15 +39,27 @@ var windowWidth;
 var bgSection = document.querySelectorAll(".bg-section");
 var vhElement = document.querySelectorAll(".vh-element");
 var isResize;
+
 function resize() {
   if (windowWidth != window.innerWidth) {
     windowWidth = window.innerWidth;
+
     for (var i = bgSection.length - 1; i >= 0; i--) {
       bgSection[i].style.height = window.innerHeight + "px";
     }
+
     for (var i = vhElement.length - 1; i >= 0; i--) {
+      var largeScreenValues = vhElement[i]
+        .getAttribute("data-values-large")
+        .split(",");
+      var mobileScreenValues = vhElement[i]
+        .getAttribute("data-values-mobile")
+        .split(",");
+      var values =
+        window.innerWidth >= 768 ? largeScreenValues : mobileScreenValues;
+
       var props = vhElement[i].getAttribute("data-props").split(",");
-      var values = vhElement[i].getAttribute("data-values").split(",");
+
       for (var l = props.length - 1; l >= 0; l--) {
         vhElement[i].style[props[l]] =
           (window.innerHeight * values[l]) / 100 + "px";
