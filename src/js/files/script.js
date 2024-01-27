@@ -3,6 +3,14 @@ import { isMobile } from "./functions.js";
 // Підключення списку активних модулів
 import { flsModules } from "./modules.js";
 
+import luxy from "luxy.js";
+
+luxy.init({
+  wrapper: "#luxy",
+  targets: ".luxy-el",
+  wrapperSpeed: 0.08,
+});
+
 // Отримуємо всі блоки content__video-wrap
 var videoWraps = document.querySelectorAll(".content__video-wrap");
 
@@ -25,4 +33,37 @@ videoWraps.forEach(function (videoWrap) {
     // Розпочинаємо відтворення відео
     videoIframe.src += "&autoplay=1";
   });
+});
+
+var windowWidth;
+var bgSection = document.querySelectorAll(".bg-section");
+var vhElement = document.querySelectorAll(".vh-element");
+var isResize;
+function resize() {
+  if (windowWidth != window.innerWidth) {
+    windowWidth = window.innerWidth;
+    for (var i = bgSection.length - 1; i >= 0; i--) {
+      bgSection[i].style.height = window.innerHeight + "px";
+    }
+    for (var i = vhElement.length - 1; i >= 0; i--) {
+      var props = vhElement[i].getAttribute("data-props").split(",");
+      var values = vhElement[i].getAttribute("data-values").split(",");
+      for (var l = props.length - 1; l >= 0; l--) {
+        vhElement[i].style[props[l]] =
+          (window.innerHeight * values[l]) / 100 + "px";
+      }
+    }
+  }
+  isResize = false;
+}
+
+resize();
+
+window.addEventListener("resize", function () {
+  if (!isResize) {
+    setTimeout(function () {
+      isResize = true;
+      resize();
+    }, 200);
+  }
 });

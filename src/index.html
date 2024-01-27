@@ -2,10 +2,10 @@
 <html lang="en">
   @@include('html/_head.htm',{ "title":"OPTI GAMES" })
   <body>
-    <div class="wrapper">
-      @@include('html/_header.htm',{})
+    <div id="luxy" class="wrapper">
       <main class="page">
-        <section class="hero">
+        <section data-speed-y="40" class="hero luxy-el">
+          @@include('html/_header.htm',{})
           <div class="hero__container">
             <div class="hero__content">
               <img
@@ -22,16 +22,10 @@
             </div>
           </div>
         </section>
-        <section class="content">
-          <div data-prlx-parent class="content__container">
-            <h3 data-prlx data-coefficient="5" class="content__title yellow">
-              our studio vision
-            </h3>
-            <div
-              data-prlx
-              data-coefficient="5"
-              class="content__video-wrap yellow-border"
-            >
+        <section class="content content-first luxy-el">
+          <div class="content__container">
+            <h3 class="content__title yellow">our studio vision</h3>
+            <div class="content__video-wrap yellow-border">
               <iframe
                 src="https://www.youtube.com/embed/Fvk0a0wvUzk?si=hu8xmnFRWtgkfEJF"
                 title="YouTube video player"
@@ -51,11 +45,12 @@
                 <img src="@img/play-icon.png" alt="play-button" />
               </button>
             </div>
-            <div data-prlx data-coefficient="5" class="content__copy">
+            <div class="content__copy">
               We started Opti so we could make the games we always dreamt of
               playing.
             </div>
-            <div data-prlx data-coefficient="5" class="content__borders-block">
+
+            <div class="content__borders-block">
               <h4 class="content__subtitle">
                 We’re currently building a game we call
               </h4>
@@ -69,34 +64,27 @@
               </div>
             </div>
           </div>
-          <picture>
-            <source
-              media="(min-width: 768px)"
-              srcset="@img/picture-fullw-2x.png 2x"
-            />
+        </section>
+        <section
+          data-props="padding-top"
+          data-values="80"
+          class="content__img-section vh-element"
+        >
+          <div
+            data-offset="-800"
+            data-speed-y="20"
+            class="content__full-img luxy-el"
+          ></div>
+        </section>
 
-            <img
-              class="ibg ibg-contain content__img-full"
-              src="@img/picture-fullw.png"
-              alt="Image"
-            />
-          </picture>
-
-          <div data-prlx-parent class="content__container">
-            <h4 data-prlx data-coefficient="5" class="content__subtitle blue">
-              close your eyes and imagine
-            </h4>
-            <div data-prlx data-coefficient="5" class="content__text">
+        <section data-offset="-100" class="content content-second luxy-el">
+          <div class="content__container">
+            <h4 class="content__subtitle blue">close your eyes and imagine</h4>
+            <div class="content__text">
               “League of Legends meets FIFA & Rocket League.”
             </div>
-            <h4 data-prlx data-coefficient="5" class="content__subtitle blue">
-              YEAH, it’s pretty wild.
-            </h4>
-            <div
-              data-prlx
-              data-coefficient="5"
-              class="content__video-wrap blue-border"
-            >
+            <h4 class="content__subtitle blue">YEAH, it’s pretty wild.</h4>
+            <div class="content__video-wrap blue-border">
               <iframe
                 src="https://www.youtube.com/embed/Fvk0a0wvUzk?si=hu8xmnFRWtgkfEJF"
                 title="YouTube video player"
@@ -116,13 +104,9 @@
                 <img src="@img/play-icon.png" alt="play-button" />
               </button>
             </div>
-            <h3 data-prlx data-coefficient="5" class="content__title blue">
-              gameplay trailer
-            </h3>
-            <div data-prlx data-coefficient="5" class="content__launch">
-              Launching 2025.
-            </div>
-            <div data-prlx data-coefficient="5" class="content__buttons">
+            <h3 class="content__title blue">gameplay trailer</h3>
+            <div class="content__launch">Launching 2025.</div>
+            <div class="content__buttons">
               <a href="#" class="purple-button content__button"
                 ><img src="@img/discord.svg" alt="discord-icon" /> Join Our
                 COMMUNITY</a
