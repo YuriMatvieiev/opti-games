@@ -200,18 +200,22 @@
     z-index: 2;
     overflow: hidden;
     background: $mainColor;
+    height: 0;
   }
   &__full-img {
     background: url("@img/picture-fullw-2x.png") bottom center / cover no-repeat;
-    @include adaptiveValue("margin-top", 20, 300);
+
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
+    max-height: 1000px;
     height: 100%;
+
     z-index: 2;
     @media (max-width: $mobile) {
       background: url("@img/picture-fullw.png") bottom center / cover no-repeat;
+      @include adaptiveValue("margin-top", 120, 260, 0, 768, 375);
     }
   }
 
