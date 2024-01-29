@@ -362,6 +362,7 @@
     wrapperUpdate: function () {
       this.wapperOffset +=
         (this.scrollTop - this.wapperOffset) * this.settings.wrapperSpeed;
+      this.wrapper.style.willChange = "transform";
       this.wrapper.style.transform =
         "translate3d(" +
         0 +
@@ -393,6 +394,7 @@
           parseInt(target.percentage) - target.left - parseInt(target.offset);
         offsetX = Math.round(targetOffsetLeft * -100) / 100;
       }
+      target.elm.style.willChange = "transform";
       target.elm.style.transform =
         "translate3d(" + offsetX + "px ," + offsetY + "px ," + 0 + ")";
     },
