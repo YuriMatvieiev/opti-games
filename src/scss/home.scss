@@ -6,9 +6,31 @@
   background: $yellow;
 
   height: 100vh;
+  max-height: -webkit-fill-available;
+
   position: relative;
   z-index: 1;
-
+  @media (max-width: $mobile) {
+  }
+  &__scroll-icon {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    width: toRem(60);
+    height: toRem(60);
+    transform: translate(-50%, 0px);
+    transition: bottom 0.3s;
+    animation: move 1.3s infinite ease-in-out;
+  }
+  @keyframes move {
+    0%,
+    100% {
+      bottom: 20px;
+    }
+    50% {
+      bottom: 10px;
+    }
+  }
   // .hero__container
   &__container {
     position: relative;
@@ -21,15 +43,16 @@
     position: absolute;
     top: 40%;
     left: 50%;
-    transform: translate(-50%, -45%);
+    transform: translate(-50%, -55%);
   }
   // .hero__logo
   &__logo {
     margin-left: -40px;
     max-width: 906px;
-
     @include adaptiveValue("margin-bottom", 50, 40);
-
+    // @media (max-height: 769px) {
+    //   max-height: 350px;
+    // }
     @media (max-width: $tablet) {
       margin-left: -20px;
       @include adaptiveValue("max-width", 720, 300, 0, 991.98, 375);

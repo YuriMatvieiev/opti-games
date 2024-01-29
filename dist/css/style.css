@@ -392,8 +392,44 @@ h6 {
 .hero {
   background: #ffc020;
   height: 100vh;
+  max-height: -webkit-fill-available;
   position: relative;
   z-index: 1;
+}
+
+.hero__scroll-icon {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  width: 3.75rem;
+  height: 3.75rem;
+  -webkit-transform: translate(-50%, 0px);
+      -ms-transform: translate(-50%, 0px);
+          transform: translate(-50%, 0px);
+  -webkit-transition: bottom 0.3s;
+  transition: bottom 0.3s;
+  -webkit-animation: move 1.3s infinite ease-in-out;
+          animation: move 1.3s infinite ease-in-out;
+}
+
+@-webkit-keyframes move {
+  0%, 100% {
+    bottom: 20px;
+  }
+
+  50% {
+    bottom: 10px;
+  }
+}
+
+@keyframes move {
+  0%, 100% {
+    bottom: 20px;
+  }
+
+  50% {
+    bottom: 10px;
+  }
 }
 
 .hero__container {
@@ -407,9 +443,9 @@ h6 {
   position: absolute;
   top: 40%;
   left: 50%;
-  -webkit-transform: translate(-50%, -45%);
-      -ms-transform: translate(-50%, -45%);
-          transform: translate(-50%, -45%);
+  -webkit-transform: translate(-50%, -55%);
+      -ms-transform: translate(-50%, -55%);
+          transform: translate(-50%, -55%);
 }
 
 .hero__logo {
