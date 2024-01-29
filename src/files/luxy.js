@@ -220,6 +220,8 @@
 //   return luxy;
 // });
 
+//========================================================================================================================================================
+
 (function (root, factory) {
   "use strict";
 
@@ -408,18 +410,28 @@
     },
     attachEvent: function () {
       var self = this;
-      window.addEventListener("resize", function () {
+
+      function handleResize() {
         if (!self.isResize) {
           cancelAnimationFrame(self.resizeId);
           cancelAnimationFrame(self.scrollId);
           self.isResize = true;
-          setTimeout(function () {
+
+          self.resizeId = requestAnimationFrame(function () {
+            self.resize();
             self.isResize = false;
-            self.resizeId = requestAnimationFrame(self.resize.bind(self));
-            self.scrollId = requestAnimationFrame(self.animate.bind(self));
-          }, 10);
+          });
+
+          self.scrollId = requestAnimationFrame(self.animate.bind(self));
         }
+      }
+
+      window.addEventListener("resize", function () {
+        handleResize();
       });
+
+      // Trigger initial resize event
+      handleResize();
     },
   };
 

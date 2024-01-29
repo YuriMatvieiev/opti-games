@@ -51,7 +51,9 @@
     luxy.init({
         wrapper: ".wrapper",
         targets: ".luxy-el",
-        wrapperSpeed: .08
+        wrapperSpeed: .08,
+        targetSpeed: .01,
+        targetPercentage: .1
     });
     var videoWraps = document.querySelectorAll(".content__video-wrap");
     videoWraps.forEach((function(videoWrap) {

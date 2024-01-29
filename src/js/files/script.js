@@ -7,6 +7,9 @@ luxy.init({
   wrapper: ".wrapper",
   targets: ".luxy-el",
   wrapperSpeed: 0.08,
+  targetSpeed: 0.01,
+  // in percentage
+  targetPercentage: 0.1,
 });
 
 // smartphone: { smooth: true },
