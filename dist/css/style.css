@@ -409,8 +409,8 @@ h6 {
   position: absolute;
   left: 50%;
   bottom: 20px;
-  width: 3.75rem;
-  height: 3.75rem;
+  width: 4rem;
+  height: 4rem;
   -webkit-transform: translate(-50%, 0px);
       -ms-transform: translate(-50%, 0px);
           transform: translate(-50%, 0px);
