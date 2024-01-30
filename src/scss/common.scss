@@ -56,3 +56,11 @@
     }
   }
 }
+
+.whitespace {
+  @include adaptiveValue("width", 11, 6);
+  display: inline-block;
+}
+.word {
+  white-space: nowrap;
+}

@@ -2,114 +2,97 @@
 import { isMobile } from "./functions.js";
 // Підключення списку активних модулів
 import { flsModules } from "./modules.js";
+import { gsap } from "gsap";
 
 luxy.init({
   wrapper: ".wrapper",
   targets: ".luxy-el",
   wrapperSpeed: 0.08,
   targetSpeed: 0.01,
-  // in percentage
   targetPercentage: 0.1,
 });
 
-// smartphone: { smooth: true },
-// tablet: { smooth: true },
+const initIntro = () => {
+  const block = document.querySelector(".hero");
+  if (!block) {
+    return;
+  }
+  const headerLogo = document.querySelector(".header__logo");
+  const headerMenuItems = document.querySelectorAll(".menu__item");
+  const logo = block.querySelector(".hero__logo");
+  const text = block.querySelector(".hero__subtitle");
+  const title = block.querySelector(".hero__title");
+  Splitting({ target: title, by: "chars" });
+  title.classList.add("animation-inited");
+  const iconScroll = block.querySelector(".hero__scroll-icon");
+  const TLIntro = gsap.timeline();
 
-// import LocomotiveScroll from "locomotive-scroll";
+  // header
+  TLIntro.fromTo(
+    headerLogo,
+    { y: 0, opacity: 0 },
+    { y: 0, opacity: 1, duration: 1 },
+    0.2
+  );
+  TLIntro.fromTo(
+    headerMenuItems,
+    { y: 0, opacity: 0 },
+    { y: 0, opacity: 1, duration: 1 },
+    0.2
+  );
 
-// const scroll = new LocomotiveScroll({
-//   el: document.querySelector("[data-scroll-container]"),
-//   inertia: 0.8,
-//   smooth: true,
-//   getDirection: true,
-//   smartphone: {
-//     smooth: true,
-//     inertia: 0.8,
-//     getDirection: true,
-//   },
-//   tablet: {
-//     smooth: true,
-//     inertia: 0.8,
-//     getDirection: true,
-//   },
-// });
+  // intro
+  TLIntro.fromTo(
+    logo,
+    { y: -20, opacity: 0 },
+    { y: 0, opacity: 1, duration: 0.5 },
+    0.4
+  );
 
-// setTimeout(() => {
-//   scroll.destroy();
-// }, 0);
-// setTimeout(() => {
-//   scroll.init();
-// }, 50);
-// setTimeout(() => {
-//   scroll.update();
-// }, 1000);
+  title.querySelectorAll(".char").forEach((char, index) => {
+    TLIntro.to(
+      char,
+      {
+        opacity: 1,
+        y: 0,
+        stagger: { each: 0.03 },
+        delay: index * 0.03,
+        duration: 0.2,
+      },
+      0.4
+    );
+  });
 
-// I know that the code could be better.
-// If you have some tips or improvement, please let me know.
+  TLIntro.fromTo(
+    text,
+    { y: -5, opacity: 0 },
+    { y: 0, opacity: 1, duration: 0.5 },
+    1.5
+  );
+  TLIntro.fromTo(
+    iconScroll,
+    { y: 0, opacity: 0, scale: 0 },
+    { y: 0, opacity: 1, duration: 0.6, scale: 1 },
+    1.8
+  );
+};
+initIntro();
 
-// import { jarallax } from "jarallax";
-// jarallax(document.querySelectorAll(".jarallax"), {
-//   speed: 0.2,
-// });
-
-// import rallax from "rallax.js";
-// const parallax = rallax(".hero", { speed: 1.05 });
-// const parallax2 = rallax(".content-first", { speed: 0.1 });
-// const parallax3 = rallax(".content__full-img", { speed: 0.2 });
-// const parallax4 = rallax(".content-second", { speed: 0.35 });
-
-// after reaching a certain position in the document,
-
-// Отримуємо всі блоки content__video-wrap
 var videoWraps = document.querySelectorAll(".content__video-wrap");
 
-// Ітеруємося по кожному блоку
 videoWraps.forEach(function (videoWrap) {
-  // Знаходимо елементи в межах поточного блоку
   var videoImage = videoWrap.querySelector(".content__video-image");
   var videoIframe = videoWrap.querySelector(".content__video-iframe");
   var playButton = videoWrap.querySelector(".content__video-button");
 
-  // Додаємо обробник подій для кліку на кнопці
   playButton.addEventListener("click", function () {
-    // Приховуємо зображення
     videoImage.style.display = "none";
-    // Приховуємо кнопку
     playButton.style.display = "none";
-    // Показуємо iframe
     videoIframe.style.display = "block";
 
-    // Розпочинаємо відтворення відео
     videoIframe.src += "&autoplay=1";
   });
 });
-
-// document.addEventListener("DOMContentLoaded", function () {
-//   // Get all sections with data-speed attribute
-//   const parallaxSections = document.querySelectorAll("[data-speed]");
-
-//   // Attach scroll event listener
-//   window.addEventListener("scroll", function () {
-//     // Calculate the scroll position
-//     const scrollPosition = window.scrollY;
-
-//     // Iterate through each parallax section
-//     parallaxSections.forEach(function (section) {
-//       // Get the speed from data-speed attribute
-//       const speed = parseFloat(section.getAttribute("data-speed"));
-
-//       // Calculate the translateY value based on scroll position and speed
-//       const translateY = scrollPosition * speed;
-
-//       // Apply the translateY transformation to the section
-//       section.style.transform = `translateY(${translateY}px)`;
-
-//       // Calculate the margin to compensate for the disappearing space
-//       const marginBottom = -translateY;
-//       section.style.marginBottom = `-${marginBottom}px`;
-//     });
-//   });
-// });
 
 var windowWidth;
 var bgSection = document.querySelectorAll(".bg-section");

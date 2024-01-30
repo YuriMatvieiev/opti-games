@@ -209,6 +209,14 @@ h6 {
   transition: border, background 0.3s;
 }
 
+.whitespace {
+  display: inline-block;
+}
+
+.word {
+  white-space: nowrap;
+}
+
 .header {
   background: #ffc020;
   padding-top: 1.25rem;
@@ -443,9 +451,9 @@ h6 {
   position: absolute;
   top: 40%;
   left: 50%;
-  -webkit-transform: translate(-50%, -55%);
-      -ms-transform: translate(-50%, -55%);
-          transform: translate(-50%, -55%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .hero__logo {
@@ -458,6 +466,19 @@ h6 {
   line-height: 70%;
   letter-spacing: -1.92px;
   text-transform: uppercase;
+  opacity: 0;
+}
+
+.hero__title.animation-inited {
+  opacity: 1;
+}
+
+.hero__title .char {
+  display: inline-block;
+  opacity: 0;
+  -webkit-transform: translateY(20px);
+  -ms-transform: translateY(20px);
+  transform: translateY(20px);
 }
 
 .hero__subtitle {
@@ -637,6 +658,10 @@ h6 {
 }
 
 @media (min-width: 60.5em) {
+  .whitespace {
+    width: 0.6875rem;
+  }
+
   .footer {
     margin-top: -1.5625rem;
   }
@@ -835,6 +860,10 @@ h6 {
 }
 
 @media (max-width: 23.4375em) {
+  .whitespace {
+    width: 0.375rem;
+  }
+
   .footer {
     margin-top: -3.125rem;
   }
@@ -852,7 +881,7 @@ h6 {
   }
 
   .hero__logo {
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.875rem;
   }
 
   .hero__title {
@@ -860,7 +889,7 @@ h6 {
   }
 
   .hero__title {
-    margin-bottom: 2.125rem;
+    margin-bottom: 1.5rem;
   }
 
   .hero__subtitle {
@@ -917,6 +946,18 @@ h6 {
 }
 
 @media (min-width: 23.4375em) and (max-width: 60.5em) {
+@supports (width: clamp( 0.375rem , 0.1773819562rem  +  0.8431703204vw , 0.6875rem )) {
+    .whitespace {
+      width: clamp( 0.375rem , 0.1773819562rem  +  0.8431703204vw , 0.6875rem );
+    }
+}
+
+@supports not (width: clamp( 0.375rem , 0.1773819562rem  +  0.8431703204vw , 0.6875rem )) {
+    .whitespace {
+      width: calc(0.375rem + 0.3125 * (100vw - 23.4375rem) / 37.0625);
+    }
+}
+
 @supports (margin-top: clamp( -3.125rem , -4.1130902192rem  +  4.215851602vw , -1.5625rem )) {
     .footer {
       margin-top: clamp( -3.125rem , -4.1130902192rem  +  4.215851602vw , -1.5625rem );
@@ -965,15 +1006,15 @@ h6 {
     }
 }
 
-@supports (margin-bottom: clamp( 2.5rem , 2.1047639123rem  +  1.6863406408vw , 3.125rem )) {
+@supports (margin-bottom: clamp( 1.875rem , 1.0845278246rem  +  3.3726812816vw , 3.125rem )) {
     .hero__logo {
-      margin-bottom: clamp( 2.5rem , 2.1047639123rem  +  1.6863406408vw , 3.125rem );
+      margin-bottom: clamp( 1.875rem , 1.0845278246rem  +  3.3726812816vw , 3.125rem );
     }
 }
 
-@supports not (margin-bottom: clamp( 2.5rem , 2.1047639123rem  +  1.6863406408vw , 3.125rem )) {
+@supports not (margin-bottom: clamp( 1.875rem , 1.0845278246rem  +  3.3726812816vw , 3.125rem )) {
     .hero__logo {
-      margin-bottom: calc(2.5rem + 0.625 * (100vw - 23.4375rem) / 37.0625);
+      margin-bottom: calc(1.875rem + 1.25 * (100vw - 23.4375rem) / 37.0625);
     }
 }
 
@@ -989,15 +1030,15 @@ h6 {
     }
 }
 
-@supports (margin-bottom: clamp( 2.125rem , 1.7297639123rem  +  1.6863406408vw , 2.75rem )) {
+@supports (margin-bottom: clamp( 1.5rem , 0.7095278246rem  +  3.3726812816vw , 2.75rem )) {
     .hero__title {
-      margin-bottom: clamp( 2.125rem , 1.7297639123rem  +  1.6863406408vw , 2.75rem );
+      margin-bottom: clamp( 1.5rem , 0.7095278246rem  +  3.3726812816vw , 2.75rem );
     }
 }
 
-@supports not (margin-bottom: clamp( 2.125rem , 1.7297639123rem  +  1.6863406408vw , 2.75rem )) {
+@supports not (margin-bottom: clamp( 1.5rem , 0.7095278246rem  +  3.3726812816vw , 2.75rem )) {
     .hero__title {
-      margin-bottom: calc(2.125rem + 0.625 * (100vw - 23.4375rem) / 37.0625);
+      margin-bottom: calc(1.5rem + 1.25 * (100vw - 23.4375rem) / 37.0625);
     }
 }
 

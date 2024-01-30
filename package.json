@@ -84,6 +84,7 @@
 		"webpack-stream": "latest"
 	},
 	"dependencies": {
+		"gsap": "^3.12.5",
 		"gulp-cheerio": "^1.0.0",
 		"isotope-layout": "^3.0.6",
 		"jarallax": "^2.2.0",

@@ -43,13 +43,13 @@
     position: absolute;
     top: 40%;
     left: 50%;
-    transform: translate(-50%, -55%);
+    transform: translate(-50%, -50%);
   }
   // .hero__logo
   &__logo {
     margin-left: -40px;
     max-width: 906px;
-    @include adaptiveValue("margin-bottom", 50, 40);
+    @include adaptiveValue("margin-bottom", 50, 30);
     // @media (max-height: 769px) {
     //   max-height: 350px;
     // }
@@ -65,7 +65,18 @@
     line-height: 70%;
     letter-spacing: -1.92px;
     text-transform: uppercase;
-    @include adaptiveValue("margin-bottom", 44, 34);
+    @include adaptiveValue("margin-bottom", 44, 24);
+    opacity: 0;
+    &.animation-inited {
+      opacity: 1;
+    }
+    .char {
+      display: inline-block;
+      opacity: 0;
+      -webkit-transform: translateY(20px);
+      -ms-transform: translateY(20px);
+      transform: translateY(20px);
+    }
     @media (max-width: $tablet) {
       letter-spacing: -1px;
       line-height: 100%;
