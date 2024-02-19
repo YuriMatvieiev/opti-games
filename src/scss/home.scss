@@ -52,7 +52,7 @@
     margin-left: -40px;
     max-width: 906px;
     @include adaptiveValue("margin-bottom", 50, 30);
-    @media (max-height: 780px) {
+    @media (max-height: 780px) and (min-width: $mobile) {
       max-width: 60%;
       margin-bottom: toRem(30);
     }

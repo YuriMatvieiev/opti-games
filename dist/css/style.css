@@ -676,6 +676,13 @@ h6 {
   max-width: 39px;
 }
 
+@media (max-height: 780px) and (min-width: 47.99875em) {
+  .hero__logo {
+    max-width: 60%;
+    margin-bottom: 1.875rem;
+  }
+}
+
 @media (min-width: 60.5em) {
   .whitespace {
     width: 0.6875rem;
@@ -1344,11 +1351,6 @@ h6 {
 }
 
 @media (max-height: 780px) {
-  .hero__logo {
-    max-width: 60%;
-    margin-bottom: 1.875rem;
-  }
-
   .hero__title {
     margin-bottom: 1.5rem;
   }
