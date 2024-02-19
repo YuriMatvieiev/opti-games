@@ -39,9 +39,11 @@
   }
   // .hero__content
   &__content {
+    padding: 0 20px;
     text-align: center;
     position: absolute;
-    top: 40%;
+    width: 100%;
+    top: 38%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -50,9 +52,10 @@
     margin-left: -40px;
     max-width: 906px;
     @include adaptiveValue("margin-bottom", 50, 30);
-    // @media (max-height: 769px) {
-    //   max-height: 350px;
-    // }
+    @media (max-height: 780px) {
+      max-width: 60%;
+      margin-bottom: toRem(30);
+    }
     @media (max-width: $tablet) {
       margin-left: -20px;
       @include adaptiveValue("max-width", 720, 300, 0, 991.98, 375);
@@ -76,6 +79,9 @@
       -webkit-transform: translateY(20px);
       -ms-transform: translateY(20px);
       transform: translateY(20px);
+    }
+    @media (max-height: 780px) {
+      margin-bottom: toRem(24);
     }
     @media (max-width: $tablet) {
       letter-spacing: -1px;
@@ -168,12 +174,28 @@
   &__copy {
     font-family: "Rubik";
     color: $white;
-    font-size: toRem(48);
-    @include adaptiveValue("font-size", 48, 30);
+    @include adaptiveValue("font-size", 38, 24);
     line-height: 120%;
-    letter-spacing: -2.88px;
-    margin-bottom: toRem(90);
+    letter-spacing: -1px;
+    margin-bottom: toRem(80);
     margin-top: toRem(50);
+    p {
+      &:not(:last-child) {
+        margin-bottom: toRem(24);
+        padding-bottom: toRem(24);
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          height: 2px;
+          width: 200px;
+          background: $yellow;
+        }
+      }
+    }
     @media (max-width: $tablet) {
       letter-spacing: -2px;
     }
@@ -237,19 +259,26 @@
     height: 0;
   }
   &__full-img {
-    background: url("@img/picture-fullw-2x.png") bottom center / cover no-repeat;
+    background: url("@img/picture-fullw-2x.png") center/cover no-repeat;
 
     position: absolute;
     left: 0;
-    top: 50%;
+    // top: 20%;
+    @include adaptiveValue("top", 300, 400, 0, 1924, 768);
     width: 100%;
-    max-height: 1000px;
+    max-height: 1500px;
     height: 100%;
 
     z-index: 2;
+    @media (min-width: 1925px) {
+      background: url("@img/picture-fullw-2x.png") center / cover no-repeat;
+      max-height: 2000px;
+      // top: 30%;
+      @include adaptiveValue("top", 300, 300, 0, 3000, 1925);
+    }
     @media (max-width: $mobile) {
-      background: url("@img/picture-fullw.png") bottom center / cover no-repeat;
-      @include adaptiveValue("margin-top", 120, 260, 0, 768, 375);
+      background: url("@img/picture-fullw.png") center / cover no-repeat;
+      @include adaptiveValue("margin-top", 20, 100, 0, 768, 375);
     }
   }
 

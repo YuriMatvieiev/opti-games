@@ -2,21 +2,28 @@
 <html lang="en">
 
 <head>
-	<title>OPTI GAMES</title>
+	<title>Opti Games</title>
 	<meta charset="UTF-8" />
 	<meta name="format-detection" content="telephone=no" />
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240130182430" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20240219150816" />
 	<link rel="shortcut icon" href="favicon.ico" />
-	<meta name="description" content="We combine scrappy indie passion with AAA-level talent and experience to create endlessly optimistic ‘golden retriever’ games." />
+	<meta name="description" content='Endlessly OPTImistic, relentlessly scrappy, and passionately dedicated to creating "Golden Retriever" games that brighten the world wherever they are.' />
 	<!-- <meta name="robots" content="noindex, nofollow" /> -->
 	<meta name="theme-color" content="#ffc020" />
 	<meta property="og:title" content="Opti Games" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="link to site" />
+	<meta property="og:url" content="https://www.beopti.gg/" />
 	<meta property="og:image" content="img/og-image.jpg" />
-	<meta property="og:description" content="We combine scrappy indie passion with AAA-level talent and experience to create endlessly optimistic ‘golden retriever’ games." />
-	<meta property="og:site_name" content="Opti Games" />
+	<meta property="og:description" content='Endlessly OPTImistic, relentlessly scrappy, and passionately dedicated to creating "Golden Retriever" games that brighten the world wherever they are.' />
+
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta property="twitter:domain" content="beopti.gg" />
+	<meta property="twitter:url" content="https://www.beopti.gg/" />
+	<meta name="twitter:title" content="Opti Games" />
+	<meta name="twitter:description" content='Endlessly OPTImistic, relentlessly scrappy, and passionately dedicated to creating "Golden Retriever" games that brighten the world wherever they are.' />
+	<meta name="twitter:image" content="img/og-image.jpg" />
+
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 </head>
 
@@ -36,7 +43,7 @@
 									<a href="https://store.steampowered.com/app/672890/Sparkball/" target="_blank" class="menu__link">Wishlist on steam <img src="img/arrow.svg" alt="arrow-icon" /></a>
 								</li>
 								<li class="menu__item">
-									<a href="https://discord.com/invite/SparkadiaGG" target="_blank" class="menu__link">discord <img src="img/arrow.svg" alt="arrow-icon" /></a>
+									<a href="https://discord.com/invite/playSparkball" target="_blank" class="menu__link">discord <img src="img/arrow.svg" alt="arrow-icon" /></a>
 								</li>
 							</ul>
 						</nav>
@@ -180,26 +187,36 @@
                     ">.</span></span>
 						</h1>
 						<h2 class="hero__subtitle">
-							We combine scrappy indie passion with AAA-level talent and
-							experience to create endlessly optimistic ‘golden retriever’
-							games.
+							Endlessly OPTImistic, relentlessly scrappy, and passionately
+							dedicated to creating "Golden Retriever" games that brighten the
+							world wherever they are.
 						</h2>
 					</div>
 				</div>
 			</section>
 			<section class="content content-first luxy-el">
 				<div class="content__container">
-					<h3 class="content__title yellow">our studio vision</h3>
+					<h3 class="content__title yellow">STAY OPTI</h3>
 					<div class="content__video-wrap yellow-border">
-						<iframe src="https://www.youtube.com/embed/Fvk0a0wvUzk?si=hu8xmnFRWtgkfEJF" title="YouTube video player" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="display: none" class="ibg content__video-iframe"></iframe>
-						<picture><source srcset="img/video-image.webp" type="image/webp"><img src="img/video-image.png" alt="" class="ibg content__video-image" /></picture>
-						<button class="content__video-button yellow-play">
-							<picture><source srcset="img/play-icon.webp" type="image/webp"><img src="img/play-icon.png" alt="play-button" /></picture>
-						</button>
+						<iframe src="https://www.youtube.com/embed/RTB8qv9m4R8?si=rbZl3F9bLexCv_EM" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; allow-scripts" allowfullscreen class="ibg content__video-iframe" allow-scripts></iframe>
+						<!-- <img
+                src="img/video-image.png"
+                alt=""
+                class="ibg content__video-image"
+              /> -->
+						<!-- <button class="content__video-button yellow-play">
+                <picture><source srcset="img/play-icon.webp" type="image/webp"><img src="img/play-icon.png" alt="play-button" /></picture>
+              </button> -->
 					</div>
 					<div class="content__copy">
-						We started Opti so we could make the games we always dreamt of
-						playing.
+						<p>
+							Our team has worked on legendary games like League of Legends,
+							World of Warcraft, Overwatch, and more.
+						</p>
+						<p>
+							Now, we've come together to build the games we've always dreamt
+							of playing ourselves.
+						</p>
 					</div>
 
 					<div class="content__borders-block">
@@ -213,8 +230,8 @@
 					</div>
 				</div>
 			</section>
-			<div data-props="padding-top" data-values-large="100" data-values-mobile="70" class="content__img-section vh-element">
-				<div class="content__full-img luxy-el" data-speed-y="18" data-offset="-750"></div>
+			<div data-props="padding-top" data-values-large="100" data-values-pc="90" data-values-mobile="70" class="content__img-section vh-element">
+				<div class="content__full-img luxy-el" data-speed-y="18" data-offset="-750" id="dynamicOffset"></div>
 			</div>
 
 			<section data-speed-y="-1" class="content content-second luxy-el">
@@ -225,16 +242,15 @@
 					</div>
 					<h4 class="content__subtitle blue">YEAH, it’s pretty wild.</h4>
 					<div class="content__video-wrap blue-border">
-						<iframe src="https://www.youtube.com/embed/Fvk0a0wvUzk?si=hu8xmnFRWtgkfEJF" title="YouTube video player" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="display: none" class="ibg content__video-iframe"></iframe>
-						<picture><source srcset="img/video-image-2.webp" type="image/webp"><img src="img/video-image-2.png" alt="" class="ibg content__video-image" /></picture>
-						<button class="content__video-button red-play">
-							<picture><source srcset="img/play-icon.webp" type="image/webp"><img src="img/play-icon.png" alt="play-button" /></picture>
-						</button>
+						<iframe src="https://www.youtube.com/embed/Fvk0a0wvUzk?si=hu8xmnFRWtgkfEJF" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; allow-scripts" allowfullscreen class="ibg content__video-iframe" allow-scripts></iframe>
+						<!-- <button class="content__video-button red-play">
+                <picture><source srcset="img/play-icon.webp" type="image/webp"><img src="img/play-icon.png" alt="play-button" /></picture>
+              </button> -->
 					</div>
 					<h3 class="content__title blue">gameplay trailer</h3>
 					<div class="content__launch">Launching 2025.</div>
 					<div class="content__buttons">
-						<a href="https://discord.com/invite/SparkadiaGG" target="_blank" class="purple-button content__button"><img src="img/discord.svg" alt="discord-icon" /> Join Our
+						<a href="https://discord.com/invite/playSparkball" target="_blank" class="purple-button content__button"><img src="img/discord.svg" alt="discord-icon" /> Join Our
 							COMMUNITY</a>
 						<a href="https://store.steampowered.com/app/672890/Sparkball/" target="_blank" class="purple-button content__button"><img src="img/steam.svg" alt="steam-icon" /> Wishlist us on
 							Steam</a>
@@ -250,10 +266,10 @@
 				</a>
 				<ul class="footer__socials">
 					<li>
-						<a href="https://discord.com/invite/SparkadiaGG" target="_blank"><img src="img/discord.svg" alt="discord" /></a>
+						<a href="https://discord.com/invite/playSparkball" target="_blank"><img src="img/discord.svg" alt="discord" /></a>
 					</li>
 					<li>
-						<a href="https://twitter.com/SparkadiaGG" target="_blank"><img src="img/twitter.svg" alt="twitter" /></a>
+						<a href="https://twitter.com/playSparkball" target="_blank"><img src="img/twitter.svg" alt="twitter" /></a>
 					</li>
 					<li>
 						<a href="https://www.linkedin.com/company/opti-games" target="_blank"><img src="img/linkedin.svg" alt="linkedin" /></a>
@@ -270,9 +286,9 @@
 		</footer>
 
 	</div>
-	<script src="files/luxy.js?_v=20240130182430" charset="utf-8"></script>
-	<script src="files/splitting.js?_v=20240130182430"></script>
-	<script src="js/app.min.js?_v=20240130182430"></script>
+	<script src="files/luxy.js?_v=20240219150816" charset="utf-8"></script>
+	<script src="files/splitting.js?_v=20240219150816"></script>
+	<script src="js/app.min.js?_v=20240219150816"></script>
 
 </body>
 
